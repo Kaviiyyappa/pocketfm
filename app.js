@@ -1,12 +1,12 @@
 const SUB={
-anime:["All","Series","Movies","OVA"],
+AUDIOBOOK:["All","Series","Movies","OVA"],
 movies:["All","Hollywood","Bollywood","Tollywood"],
 adult:["All","Desi","English","Cosplay","Japanese"]
 };
 
 let DB=[];
 let current=[];
-let activeCategory="anime";
+let activeCategory="AUDIOBOOK";
 let activeSub="All";
 
 fetch("data.json")
@@ -17,7 +17,7 @@ startApp();
 });
 
 function startApp(){
-loadCategory("anime",document.querySelector(".tabs button"));
+loadCategory("AUDIOBOOK",document.querySelector(".tabs button"));
 runSlider();
 }
 
