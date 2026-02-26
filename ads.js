@@ -24,23 +24,12 @@ callback();
 },300);
 }
 
-function initAds(){
+show_10652965().then(() => {
+  console.log('User watched the ad');
+}).catch(() => {
+  console.log('Ad failed or was skipped');
+});
 
-function safe(id){
-try{
-return window.Adsgram.init({blockId:id});
-}catch(e){
-console.log("Ad init error:",id,e);
-return null;
-}
-}
-
-homeAd = safe(IDS.home);
-verifyAd = safe(IDS.verify);
-rewardAd = safe(IDS.reward);
-
-console.log("Ads ready");
-}
 
 waitForAdsgram(initAds);
 
